@@ -19,7 +19,7 @@
             data.set('aaa', fileInput.files[0]);
 
             const res = await axios.post('http://localhost:3333/aaa', data, {
-                // headers: { 'content-type': 'multipart/form-data' }
+                headers: { 'content-type': 'multipart/form-data' }
             });
             console.log(res);
         }
@@ -31,7 +31,7 @@
             [...fileInput.files].forEach(item => {
                 data.append('bbb', item)
             })
-            
+
             const res = await axios.post('http://localhost:3333/bbb', data);
             console.log(res);
         }
@@ -62,7 +62,7 @@
             console.log(res);
         }
 
-        fileInput.onchange = formData4;
+        fileInput.onchange = formData2;
     </script>
 </body>
 </html>
