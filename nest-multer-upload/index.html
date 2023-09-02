@@ -21,7 +21,7 @@
             const res = await axios.post('http://localhost:3000/aaa', data);
             console.log(res);
         }
-        
+
         async function formData2() {
             const data = new FormData();
             data.set('name','光');
@@ -29,7 +29,7 @@
             [...fileInput.files].forEach(item => {
                 data.append('bbb', item)
             })
-            
+
             const res = await axios.post('http://localhost:3000/bbb', data);
             console.log(res);
         }
@@ -90,7 +90,7 @@
             console.log(res);
         }
 
-        fileInput.onchange = formData7;
+        fileInput.onchange = formData2;
     </script>
 </body>
 </html>
