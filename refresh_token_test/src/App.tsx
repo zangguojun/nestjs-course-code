@@ -34,7 +34,7 @@ axios.interceptors.response.use(
   },
   async (error) => {
     let { data, config } = error.response;
-
+    debugger
     if(refreshing) {
       return new Promise((resolve) => {
           queue.push({
@@ -56,13 +56,13 @@ axios.interceptors.response.use(
           queue.forEach(({config, resolve}) => {
               resolve(axios(config))
           })
-  
+          queue.length = 0
           return axios(config);
         } else {
           alert('登录过期，请重新登录');
           return Promise.reject(res.data);
         }
-        
+
     } else {
       return error.response;
     }
@@ -83,20 +83,21 @@ function App() {
   }
 
   async function query() {
+    debugger
     if(!localStorage.getItem('access_token')) {
       await login();
     }
 
     await [
-      axios.get('http://localhost:3000/bbb'),
-      axios.get('http://localhost:3000/bbb'),
-      axios.get('http://localhost:3000/bbb')
+      axios.get('http://localhost:3000/bbb1'),
+      axios.get('http://localhost:3000/bbb2'),
+      axios.get('http://localhost:3000/bbb3')
     ];
 
     const { data: aaaData } = await axios.get('http://localhost:3000/aaa');
-    const { data: bbbData } = await axios.get('http://localhost:3000/bbb', {
+    const { data: bbbData } = await axios.get('http://localhost:3000/bbb4', {
       // headers: {
-      //   Authorization: 'Bearer ' + localStorage.getItem('access_token') 
+      //   Authorization: 'Bearer ' + localStorage.getItem('access_token')
       // }
     });
 
@@ -106,7 +107,7 @@ function App() {
   useEffect(() => {
       query();
   }, [])
-  
+
 
   return (
     <div>

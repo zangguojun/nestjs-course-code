@@ -16,7 +16,7 @@ export class AppController {
     return 'aaa';
   }
 
-  @Get('bbb')
+  @Get(['bbb1', 'bbb2', 'bbb3', 'bbb4'])
   @UseGuards(LoginGuard)
   bbb() {
     return 'bbb';
