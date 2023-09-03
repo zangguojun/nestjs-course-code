@@ -36,13 +36,13 @@ services:
   mysql-container:
     image: mysql
     volumes:
-      - /Users/guang/mysql-data:/var/lib/mysql
+      - /Users/tong/Desktop/docker-demo/mysql-data:/var/lib/mysql
     # networks:
     #   - common-network
   redis-container:
     image: redis
     volumes:
-      - /Users/guang/aaa:/data
+      - /Users/tong/Desktop/docker-demo/aaa:/data
     # networks:
     #   - common-network
 # networks:
