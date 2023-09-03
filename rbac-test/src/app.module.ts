@@ -14,7 +14,7 @@ import { APP_GUARD } from '@nestjs/core';
 import { PermissionGuard } from './permission.guard';
 
 @Module({
-  imports: [ 
+  imports: [
     JwtModule.register({
       global: true,
       secret: 'guang',
@@ -27,7 +27,7 @@ import { PermissionGuard } from './permission.guard';
       host: "localhost",
       port: 3306,
       username: "root",
-      password: "guang",
+      password: "buchiyu",
       database: "rbac_test",
       synchronize: true,
       logging: true,
