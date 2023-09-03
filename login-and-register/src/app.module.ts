@@ -7,13 +7,13 @@ import { User } from './user/entities/user.entity';
 import { UserModule } from './user/user.module';
 
 @Module({
-  imports: [ 
+  imports: [
     TypeOrmModule.forRoot({
       type: "mysql",
       host: "localhost",
       port: 3306,
       username: "root",
-      password: "guang",
+      password: 'buchiyu',
       database: "login_test",
       synchronize: true,
       logging: true,
@@ -23,7 +23,7 @@ import { UserModule } from './user/user.module';
       extra: {
           authPlugin: 'sha256_password',
       }
-    }), 
+    }),
     JwtModule.register({
       global: true,
       secret: 'guang',
