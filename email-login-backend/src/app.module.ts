@@ -20,7 +20,7 @@ import { RedisModule } from './redis/redis.module';
       host: "localhost",
       port: 3306,
       username: "root",
-      password: "guang",
+      password: "buchiyu",
       database: "email_login_test",
       synchronize: true,
       logging: true,
