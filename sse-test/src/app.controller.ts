@@ -43,7 +43,7 @@ export class AppController {
   stream3() {
     return new Observable((observer) => {
         const json = readFileSync('./package.json').toJSON();
-        observer.next({ data: { msg: 1 }});
+        observer.next({ data: { msg: json }});
     });
   }
 }
