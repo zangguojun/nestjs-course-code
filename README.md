@@ -32,6 +32,8 @@
 
 [内置的 pipe](./pipe-test)
 
+[自定义 Exception Filter](./exception-filter-test)
+
 [exporess 的 multer 包](./multer-test)
 
 [Nest 的文件上传](./nest-multer-upload)
@@ -115,3 +117,19 @@
 [etcd 实现注册中心和配置中心](./etcd-test/)
 
 [扫码登录](./qrcode-login)
+
+[手写 WebSocket 协议](./my-websocket/)
+
+[repl 模式](./repl-test)
+
+[graphql 快速入门](./grqphql-crud-demo)
+
+[rabbitmq 快速入门](./rabbitmq-test)
+
+[grpc 跨语言远程方法调用](./grpc-client/)
+
+[Nest + Redis + 地图，实现附近的充电宝](./nearby-search/)
+
+[Prisma 快速入门](./prisma-test/)
+
+[Prisma 全部命令](./prisma-all-command/)
